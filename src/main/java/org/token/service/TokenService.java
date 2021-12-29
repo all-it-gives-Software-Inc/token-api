@@ -17,7 +17,6 @@ import java.nio.file.AccessDeniedException;
 @Slf4j
 @ApplicationScoped
 public class TokenService {
-    private String privateKey = "qxBEEQv7E8aviX1KUcdOiF5ve5COUPAr";
 
     @SneakyThrows
     private String decryptToken(String encryptedToken) {
@@ -27,6 +26,7 @@ public class TokenService {
 
         jweObject.getPayload();
 
+        String privateKey = "qxBEEQv7E8aviX1KUcdOiF5ve5COUPAr";
         DirectDecrypter directDecrypter = new DirectDecrypter(privateKey.getBytes());
 
         jweObject.decrypt(directDecrypter);
