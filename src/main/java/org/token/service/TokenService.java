@@ -10,12 +10,9 @@ import com.nimbusds.jwt.JWTParser;
 import com.nimbusds.jwt.SignedJWT;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.token.response.UserResponse;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.nio.file.AccessDeniedException;
-import java.util.List;
-import java.util.Map;
 
 @Slf4j
 @ApplicationScoped
